@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 flex flex-col items-center justify-center min-h-screen p-4">
+    <!-- Logo -->
+    <div class="flex items-center justify-center w-40 h-40 mx-auto">
+        <img src="./images1/Logo Container.png" alt="MediConnect Logo">
+    </div>
+    <div class="grid md:grid-cols-2 gap-10 px-[8%] py-[3%]">
+        <div class="flex flex-col">
+            <img src="./images1/pana.png" alt="Register" class="object-contain w-[80%]">
+        </div>
+        <div class="border border-gray-200 p-4 w-full max-w-md">
+            <h1 class="text-2xl font-bold text-gray-900 text-center mb-2">Register</h1>
+            <p class="text-gray-500 text-sm text-center mb-6">Please enter your details to create account</p>
+
+            <form>
+                <!-- Full Name -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-medium mb-2">Full Name</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <input type="text" placeholder="Enter Name"
+                            class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                    </div>
+                </div>
+
+                <!-- Email Address -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-medium mb-2">Email Address</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <input type="email" placeholder="Enter Email Address"
+                            class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-medium mb-2">Password</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                        <input type="password" id="password" placeholder="••••••••••••"
+                            class="w-full pl-10 pr-12 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        <button type="button" onclick="togglePassword('password', 'passwordIcon')"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-eye-slash" id="passwordIcon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-medium mb-2">Confirm Password</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                        <input type="password" id="confirmPassword" placeholder="••••••••••••"
+                            class="w-full pl-10 pr-12 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        <button type="button" onclick="togglePassword('confirmPassword', 'confirmPasswordIcon')"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-eye-slash" id="confirmPasswordIcon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="mb-6">
+                    <label class="flex items-start">
+                        <input type="checkbox"
+                            class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 mt-0.5">
+                        <span class="ml-2 text-sm text-gray-600">
+                            I agree to the
+                            <a href="#" class="text-[#2E37A4] hover:underline">Terms of Service</a> &
+                            <a href="#" class="text-[#2E37A4] hover:underline">Privacy Policy</a>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Register Button -->
+                <a href="dashboard.html"
+                        class="w-full block text-center bg-[#2E37A4] text-white py-3 rounded-lg font-medium hover:bg-indigo-700 transition duration-200 mb-4">
+                        Register
+                </a>
+
+                <!-- OR Divider -->
+                <div class="relative mb-4">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-2 bg-white text-gray-500">OR</span>
+                    </div>
+                </div>
+
+                <!-- Social Login Buttons -->
+                <div class="flex justify-center gap-4 mb-6">
+                    <button type="button"
+                        class="w-12 h-12 flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-50 transition duration-200">
+                        <i class="fab fa-facebook-f text-blue-600 text-xl"></i>
+                    </button>
+                    <button type="button"
+                        class="w-12 h-12 flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-50 transition duration-200">
+                        <i class="fab fa-google text-red-500 text-xl"></i>
+                    </button>
+                    <button type="button"
+                        class="w-12 h-12 flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-50 transition duration-200">
+                        <i class="fab fa-apple text-gray-900 text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Login Link -->
+                <p class="text-center text-sm text-gray-600">
+                    Already have an account yet?
+                    <a href="signin.html" class="text-[#2E37A4] hover:underline font-medium">Login</a>
+                </p>
+            </form>
+        </div>
+
+
+    </div>
+
+    <script>
+        function togglePassword(inputId, iconId) {
+            const input = document.getElementById(inputId);
+            const icon = document.getElementById(iconId);
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            }
+        }
+    </script>
+</body>
+
+</html>

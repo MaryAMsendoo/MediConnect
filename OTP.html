@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification - MediConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 flex flex-col items-center justify-center min-h-screen p-4">
+    <!-- Logo -->
+    <div class="flex items-center justify-center w-40 h-40 mx-auto">
+        <img src="./images1/Logo Container.png" alt="MediConnect Logo">
+    </div>
+    <div class="grid md:grid-cols-2 gap-10 px-[8%] pb-[3%] max-w-7xl w-full">
+        <!-- Left Side - Illustration -->
+        <div class="flex flex-col bg-gradient-to-br from-indigo-100 to-purple-50 rounded-2xl p-10">
+            <div class="relative w-full max-w-md">
+                <img src="./images1/reset.png" alt="OTP Verification" class="object-contain w-[80%]">
+            </div>
+        </div>
+
+        <!-- Right Side - OTP Verification -->
+        <div class="flex flex-col justify-center">
+            <div class="rounded border border-gray-100 p-8 w-full max-w-md">
+                <h1 class="text-2xl font-bold text-gray-900 text-center mb-2">Email OTP Verification</h1>
+                <p class="text-gray-500 text-sm text-center mb-6">We sent a code to info@example.com</p>
+
+                <form>
+                    <!-- OTP Input Fields -->
+                    <div class="flex justify-center gap-3 mb-4">
+                        <input type="text" maxlength="1" 
+                            class="w-14 h-14 text-center text-xl font-bold border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                            onkeyup="moveToNext(this, 'otp2')" id="otp1">
+                        <input type="text" maxlength="1" 
+                            class="w-14 h-14 text-center text-xl font-bold border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                            onkeyup="moveToNext(this, 'otp3')" id="otp2">
+                        <input type="text" maxlength="1" 
+                            class="w-14 h-14 text-center text-xl font-bold border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                            onkeyup="moveToNext(this, 'otp4')" id="otp3">
+                        <input type="text" maxlength="1" 
+                            class="w-14 h-14 text-center text-xl font-bold border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                            id="otp4">
+                    </div>
+
+                    <!-- Resend Code & Timer -->
+                    <div class="flex justify-center items-center gap-2 mb-6 text-sm">
+                        <span class="text-gray-600">Didn't receive code.</span>
+                        <a href="#" class="text-[#2E37A4] hover:underline font-medium">Resend Code</a>
+                        <span class="text-red-500 font-medium" id="timer">00:45</span>
+                    </div>
+
+                    <!-- Verify Button -->
+                     <div class="w-[100%]">
+                        <a href="resetpassword.html"
+                        class="w-[100%] block text-center bg-[#2E37A4] text-white py-3 rounded-lg font-medium hover:bg-indigo-700 transition duration-200">
+                        Verify & Proceed
+                    </a>
+                     </div>
+                </form>
+            </div>
+
+            <!-- Copyright -->
+            <p class="text-center text-sm text-gray-500 mt-6">
+                Copyright ©2025 - Mediconnect
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Auto-move to next input
+        function moveToNext(current, nextFieldId) {
+            if (current.value.length === 1) {
+                if (nextFieldId) {
+                    document.getElementById(nextFieldId).focus();
+                }
+            }
+        }
+
+        // Countdown timer
+        let timeLeft = 45;
+        const timerElement = document.getElementById('timer');
+        
+        const countdown = setInterval(() => {
+            timeLeft--;
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                timerElement.textContent = '00:00';
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>

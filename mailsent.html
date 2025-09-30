@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sent - MediConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 flex flex-col items-center justify-center min-h-screen p-4">
+    <!-- Logo -->
+    <div class="flex items-center justify-center w-40 h-40 mx-auto">
+        <img src="./images1/Logo Container.png" alt="MediConnect Logo">
+    </div>
+    <div class="grid md:grid-cols-2 gap-10 px-[8%] pb-[3%] max-w-7xl w-full">
+        <!-- Left Side - Illustration -->
+        <div class="flex flex-col bg-gradient-to-br from-indigo-100 to-purple-50 rounded-2xl">
+            <div class="relative w-full max-w-md">
+                <img src="./images1/success.png" alt="Email Sent" class="object-contain w-[80%]">
+            </div>
+        </div>
+
+        <!-- Right Side - Email Sent Confirmation -->
+        <div class="flex flex-col justify-center">
+            <div class="rounded border border-gray-100 p-8 w-full max-w-md">
+                <!-- Success Icon -->
+                <div class="flex justify-center mb-6">
+                    <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-check text-white text-3xl"></i>
+                    </div>
+                </div>
+
+                <h1 class="text-2xl font-bold text-gray-900 text-center mb-2">Email Sent!</h1>
+                <p class="text-gray-500 text-sm text-center mb-6">Check your email & change your password</p>
+
+                <!-- Reset Password Button -->
+                 <a href="OTP.html">
+                <button type="button"
+                    class="w-full bg-[#2E37A4] text-white py-3 rounded-lg font-medium hover:bg-indigo-700 transition duration-200">
+                    Reset Password
+                </button>
+                </a>
+            </div>
+
+            <!-- Copyright -->
+            <p class="text-center text-sm text-gray-500 mt-6">
+                Copyright ©2025 - Mediconnect
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

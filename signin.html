@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - MediConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 flex flex-col items-center justify-center min-h-screen p-4">
+    <!-- Logo -->
+    <div class="flex items-center justify-center w-40 h-40 mx-auto">
+        <img src="./images1/Logo Container.png" alt="MediConnect Logo">
+    </div>
+    <div class="grid md:grid-cols-2 gap-10 px-[8%] pb-[3%] max-w-7xl w-full">
+        <!-- Left Side - Illustration -->
+        <div
+            class="flex flex-col justify-center items-center bg-gradient-to-br from-indigo-100 to-purple-50 rounded-2xl p-10">
+            <div class="relative w-full max-w-md">
+                <img src="./images1/rafiki.png" alt="Login object-contain">
+            </div>
+        </div>
+
+        <!-- Right Side - Login Form -->
+        <div class="flex flex-col justify-center">
+            <div class="rounded border border-gray-100 p-8 w-full max-w-md">
+                <h1 class="text-2xl font-bold text-gray-900 text-center mb-2">Sign In</h1>
+                <p class="text-gray-500 text-sm text-center mb-6">Please enter below details to access the dashboard</p>
+
+                <form>
+                    <!-- Email Address -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-medium mb-2">Email Address</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <input type="email" placeholder="Enter Email Address"
+                                class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-medium mb-2">Password</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <input type="password" id="loginPassword" placeholder="••••••••••••"
+                                class="w-full pl-10 pr-12 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            <button type="button" onclick="togglePassword('loginPassword', 'loginPasswordIcon')"
+                                class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                                <i class="fas fa-eye-slash" id="loginPasswordIcon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Remember Me & Forgot Password -->
+                    <div class="flex items-center justify-between mb-6">
+                        <label class="flex items-center">
+                            <input type="checkbox"
+                                class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+                            <span class="ml-2 text-sm text-gray-600">Remember Me</span>
+                        </label>
+                        <a href="forgetpassword.html" class="text-sm text-red-500 hover:underline">Forgot password?</a>
+                    </div>
+
+                    <!-- Login Button -->
+                   <a href="dashboard.html"
+                        class="w-full block text-center bg-[#2E37A4] text-white py-3 rounded-lg font-medium hover:bg-indigo-700 transition duration-200 mb-4">
+                        Login
+                   </a>
+
+                    <!-- OR Divider -->
+                    <div class="relative mb-4">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-white text-gray-500">OR</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Login Buttons -->
+                    <div class="flex justify-center gap-4 mb-6">
+                        <button type="button"
+                            class="w-12 h-12 flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-50 transition duration-200">
+                            <i class="fab fa-facebook-f text-blue-600 text-xl"></i>
+                        </button>
+                        <button type="button"
+                            class="w-12 h-12 flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-50 transition duration-200">
+                            <i class="fab fa-google text-red-500 text-xl"></i>
+                        </button>
+                        <button type="button"
+                            class="w-12 h-12 flex items-center justify-center border border-gray-300 rounded-lg hover:bg-gray-50 transition duration-200">
+                            <i class="fab fa-apple text-gray-900 text-xl"></i>
+                        </button>
+                    </div>
+
+                    <!-- Register Link -->
+                    <p class="text-center text-sm text-gray-600">
+                        Don't have an account yet?
+                        <a href="register.html" class="text-[#2E37A4] hover:underline font-medium">Register</a>
+                    </p>
+                </form>
+            </div>
+
+            <!-- Copyright -->
+            <p class="text-center text-sm text-gray-500 mt-6">
+                Copyright ©2025 - Mediconnect
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword(inputId, iconId) {
+            const input = document.getElementById(inputId);
+            const icon = document.getElementById(iconId);
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            }
+        }
+    </script>
+</body>
+
+</html>
