@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediConnect || Find Pharmacies</title>
+    <title>MediConnect || Doctor's Dashboard</title>
 
     <link rel="icon" href="./favicon.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awsome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -45,7 +46,7 @@
             </div>
             <div class="flex items-center gap-2 lg:gap-4">
                 <button
-                    class="bg-gradient-to-r from-[#2E37A4] to-[#0E9384] text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 hover:opacity-90">
+                    class="bg-gradient-to-r from-[#2E37A4] to-[#0E9384] text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-blue-800">
                     <span class="hidden sm:inline">AI Assistance</span>
                     <i class="fa-solid fa-brain"></i>
                 </button>
@@ -95,13 +96,15 @@
             </div>
 
             <nav class="space-y-1">
-                <a href="./dashboard.html"
-                    class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
+                <a href="#" class="flex items-center gap-3 px-3 py-2 text-blue-600 bg-blue-50 rounded-lg font-medium">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                     </svg>
                     <span>Dashboard</span>
+                    <svg class="w-4 h-4 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
                 </a>
                 <a href="./bookconsultation.html"
                     class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
@@ -111,29 +114,22 @@
                     </svg>
                     <span>Book Consultation</span>
                 </a>
-                <a href="./findpharmacy.html"
-                    class="flex items-center gap-3 px-3 py-2 text-blue-600 bg-blue-50 rounded-lg font-medium">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span>Find a Pharmacy</span>
-                </a>
-                <a href="./prescription.html" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
+                <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                     <span>Prescriptions</span>
                 </a>
-                <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
+                <a href="./findpharmacy.html"
+                    class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    <span>Appointments</span>
+                    <span>Pharmacies</span>
                 </a>
                 <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -168,109 +164,259 @@
             </nav>
         </aside>
 
-        
-
         <!-- Main Content -->
         <main class="flex-1 lg:ml-64 p-4 lg:p-8">
-            <div class="flex justify-between items-center mb-8">
-                <h1 class="text-2xl lg:text-3xl font-bold text-gray-900">Find a Pharmacy</h1>
-                <button
-                    class="bg-[#2E37A4] text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-blue-700">
-                    <span class="text-xl">+</span>
-                    <span>New Search</span>
-                </button>
-            </div>
-
-            <!-- Search Section -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
-                <h2 class="text-lg font-bold text-gray-900 mb-4">Search by location or pharmacy</h2>
-                <div class="relative mb-4">
-                    <input type="text" placeholder="Enter location or pharmacy name"
-                        class="w-full border border-gray-200 rounded-lg px-4 py-2.5 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                    <svg class="w-5 h-5 text-gray-400 absolute left-3 top-3" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                </div>
-                <div class="flex flex-wrap gap-3">
+            <!-- Header -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+                <h1 class="text-2xl lg:text-3xl font-bold text-gray-900">Doctor Dashboard</h1>
+                <div class="flex gap-3">
                     <button
-                        class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg text-sm font-medium hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                        24hrs service
+                        class="bg-[#4C5FD5] text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-[#3d4fb5]">
+                        <span class="text-lg">+</span>
+                        New Appointment
                     </button>
                     <button
-                        class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                        Accept my Insurance
-                    </button>
-                    <button
-                        class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                        Specific Medication
+                        class="bg-white text-gray-700 px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-gray-50 border border-gray-200">
+                        <i class="fas fa-calendar-alt"></i>
+                        Schedule Availability
                     </button>
                 </div>
             </div>
 
-            <!-- Map and Pharmacy List Section -->
-            <div class="grid grid-cols-1 gap-6 mb-6">
-                <!-- Map Section -->
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                    <h2 class="text-lg font-bold text-gray-900 mb-4">Makurdi, Benue, Nigeria</h2>
-                    <div class="h-96 rounded-lg overflow-hidden">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252628.9787667399!2d8.38755995!3d7.7322235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1057fd2c3d000001%3A0x7e5c26caa3d4a3a6!2sMakurdi%2C%20Benue%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1640000000000!5m2!1sen!2sus"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                <!-- Total Appointments -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <div class="text-gray-500 text-sm mb-2">Total Appointments</div>
+                            <div class="text-3xl font-bold text-gray-900">658</div>
+                        </div>
+                        <div class="w-12 h-12 bg-[#E8EAFF] rounded-lg flex items-center justify-center">
+                            <i class="fas fa-calendar-check text-[#4C5FD5] text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center gap-2 mb-3">
+                        <div class="w-16 h-5 border-box">
+                            <img src="./images1/Chart.png" class="object-cover" alt="Total Appointments Chart">
+                        </div>
+                        <div>
+                            <span
+                                class="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded">+95%</span>
+                            <span class="text-gray-500 text-xs">+21% in last 7 Days</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Online Consultations -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <div class="text-gray-500 text-sm mb-2">Online Consultations</div>
+                            <div class="text-3xl font-bold text-gray-900">125</div>
+                        </div>
+                        <div class="w-12 h-12 bg-[#FFF4ED] rounded-lg flex items-center justify-center">
+                            <i class="fas fa-video text-[#FF6B2C] text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center gap-2 mb-3">
+                        <div class="w-16 h-5 border-box">
+                            <img src="./images1/Chart (2).png" class="object-cover" alt="Online Cansultations Chart">
+                        </div>
+                        <div>
+                            <span class="bg-red-100 text-red-700 text-xs font-semibold px-2 py-1 rounded">-15%</span>
+                            <span class="text-gray-500 text-xs">+21% in last 7 Days</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Cancelled Appointments -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <div class="text-gray-500 text-sm mb-2">Cancelled Appointments</div>
+                            <div class="text-3xl font-bold text-gray-900">35</div>
+                        </div>
+                        <div class="w-12 h-12 bg-[#E5F9F6] rounded-lg flex items-center justify-center">
+                            <i class="fas fa-times text-[#00C9A7] text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <div class="w-16 h-5 border-box">
+                            <img src="./images1/Chart (3).png" class="object-cover" alt="Cancelled Appointments Chart">
+                        </div>
+                        <span class="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded">+45%</span>
+                        <span class="text-gray-500 text-xs">+31% in last 7 Days</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="grid grid-cols-1 gap-6">
+                <!-- Upcoming Appointments -->
+                <div class="shadow-sm border border-gray-200 p-6">
+                    <div class="flex w-full justify-between mb-6">
+                        <h2 class="text-xl font-bold text-gray-900">Upcoming Appointments</h2>
+                        <select class="border border-gray-200 rounded-lg px-3 py-1.5 text-sm text-gray-700">
+                            <option>Today</option>
+                            <option>Tomorrow</option>
+                            <option>This Week</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Appointment Card -->
+                        <div class="border-t border-gray-200 p-4">
+                            <div class="flex items-start gap-3 mb-4">
+                                <img src="https://ui-avatars.com/api/?name=Alberto+Ripley&background=4C5FD5&color=fff"
+                                    alt="Alberto Ripley" class="w-12 h-12 rounded-full">
+                                <div class="flex-1">
+                                    <div class="font-semibold text-gray-900">Alberto Ripley</div>
+                                    <div class="text-sm text-[#6C7688]">+1 56556 54565</div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2 mb-4">
+                                <div class="flex items-center font-[700] text-sm text-gray-600">
+                                    <i class="fas fa-clipboard mr-2"></i>
+                                    General Visit
+                                </div>
+                                <div class="flex items-center text-xs text-[#6C7688]">
+                                    <i class="fas fa-calendar mr-2"></i>
+                                    Monday, 31 July 2025
+                                    <i class="fas fa-clock ml-3 mr-2"></i>
+                                    03:35 PM
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3 mb-3">
+                                <div>
+                                    <div class="text-sm text-gray-600 font-[700] mb-1">Specialty</div>
+                                    <div class="text-xs font-[400] text-[#6C7688]">Oncology</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-gray-600 font-[700] mb-1">Type</div>
+                                    <div class="text-xs font-[400] text-[#6C7688]">Online Consultation</div>
+                                </div>
+                            </div>
+
+                            <div class="pb-4 border-b border-300">
+                                <button
+                                    class="w-full bg-[#2E37A4] text-white py-2.5 rounded-lg font-medium hover:bg-[#3d4fb5]">
+                                    Start Appointment
+                                </button>
+
+                            </div>
+                            <div class="grid grid-cols-2 pt-4 gap-2">
+                                <button
+                                    class="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-gray-800">
+                                    <i class="fas fa-comment"></i>
+                                    Chat Now
+                                </button>
+                                <button
+                                    class="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 py-2 rounded-lg text-sm font-medium hover:text-white hover:bg-gray-800">
+                                    <i class="fas fa-video"></i>
+                                    Video Consultation
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Nearby Pharmacies Section -->
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                    <h2 class="text-lg font-bold text-gray-900 mb-4">Near By Pharmacy</h2>
-
-                    <!-- Community Pharmacy -->
-                    <div class="border-b border-gray-200 pb-4 mb-4">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-semibold text-gray-900">Community Pharmacy</h3>
-                            <button
-                                class="bg-[#2E37A4] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium">
-                                Directions
-                            </button>
-                        </div>
-                        <p class="text-gray-500 text-sm mb-4">123 Elm Street, Anytown, CA 91234</p>
-
-                        <div class="grid grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <p class="text-gray-500 mb-1">Phone</p>
-                                <p class="text-gray-900">(555) 123-4567</p>
-                            </div>
-                            <div>
-                                <p class="text-gray-500 mb-1">Hours</p>
-                                <p class="text-gray-900">Mon-Fri: 9am-9pm, Sat: 10am-6pm, Sun: Closed</p>
-                            </div>
-                        </div>
+                <!-- Recent Appointments -->
+                <div class="shadow-sm border border-gray-200 p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-xl font-bold text-gray-900">Recent Appointments</h2>
+                        <select class="border border-gray-200 rounded-lg px-3 py-1.5 text-sm text-gray-700">
+                            <option>Weekly</option>
+                            <option>Monthly</option>
+                            <option>Yearly</option>
+                        </select>
                     </div>
 
-                    <!-- HealthPlus Pharmacy -->
-                    <div class="pt-4">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-semibold text-gray-900">HealthPlus Pharmacy</h3>
-                            <button
-                                class="bg-[#2E37A4] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium">
-                                Directions
-                            </button>
-                        </div>
-                        <p class="text-gray-500 text-sm mb-4">456 Oak Avenue, Anytown, CA 91234</p>
-
-                        <div class="grid grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <p class="text-gray-500 mb-1">Phone</p>
-                                <p class="text-gray-900">(555) 123-4567</p>
-                            </div>
-                            <div>
-                                <p class="text-gray-500 mb-1">Hours</p>
-                                <p class="text-gray-900">Mon-Fri: 9am-9pm, Sat: 10am-6pm, Sun: Closed</p>
-                            </div>
-                        </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="border-b border-gray-200">
+                                <tr class="text-left">
+                                    <th class="pb-3 text-sm font-semibold text-gray-600">Patient</th>
+                                    <th class="pb-3 text-sm font-semibold text-gray-600">Date & Time</th>
+                                    <th class="pb-3 text-sm font-semibold text-gray-600">Status</th>
+                                    <th class="pb-3 text-sm font-semibold text-gray-600">Fees</th>
+                                    <th class="pb-3"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="py-4">
+                                        <div class="flex items-center gap-3">
+                                            <img src="https://ui-avatars.com/api/?name=Alberto+Ripley&background=4C5FD5&color=fff"
+                                                alt="Alberto Ripley" class="w-10 h-10 rounded-full">
+                                            <div>
+                                                <div class="font-medium text-gray-900">Alberto Ripley</div>
+                                                <div class="text-xs text-gray-500">+1 56556 54565</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="py-4">
+                                        <div class="text-sm text-gray-900">27 May 2025</div>
+                                        <div class="text-xs text-gray-500">09:30 AM</div>
+                                    </td>
+                                    <td class="py-4">
+                                        <span
+                                            class="bg-green-100 text-green-700 text-xs font-medium px-3 py-1 rounded-full">Completed</span>
+                                    </td>
+                                    <td class="py-4">
+                                        <div class="text-sm font-semibold text-gray-900">$400</div>
+                                    </td>
+                                    <td class="py-4">
+                                        <div class="flex gap-2">
+                                            <button class="text-gray-400 hover:text-gray-600">
+                                                <i class="fas fa-file-alt"></i>
+                                            </button>
+                                            <button class="text-gray-400 hover:text-gray-600">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4">
+                                        <div class="flex items-center gap-3">
+                                            <img src="https://ui-avatars.com/api/?name=Susan+Babin&background=EC4899&color=fff"
+                                                alt="Susan Babin" class="w-10 h-10 rounded-full">
+                                            <div>
+                                                <div class="font-medium text-gray-900">Susan Babin</div>
+                                                <div class="text-xs text-gray-500">+1 65658 95654</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="py-4">
+                                        <div class="text-sm text-gray-900">26 May 2025</div>
+                                        <div class="text-xs text-gray-500">10:15 AM</div>
+                                    </td>
+                                    <td class="py-4">
+                                        <span
+                                            class="bg-yellow-100 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full">Waiting</span>
+                                    </td>
+                                    <td class="py-4">
+                                        <div class="text-sm font-semibold text-gray-900">$370</div>
+                                    </td>
+                                    <td class="py-4">
+                                        <div class="flex gap-2">
+                                            <button class="text-gray-400 hover:text-gray-600">
+                                                <i class="fas fa-file-alt"></i>
+                                            </button>
+                                            <button class="text-gray-400 hover:text-gray-600">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -300,22 +446,21 @@
                 </div>
 
                 <nav class="space-y-1">
-                    <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
+                    <a href="./dashboard.html"
+                        class="flex items-center gap-3 px-3 py-2 text-blue-600 bg-blue-50 rounded-lg font-medium">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                         </svg>
                         <span>Dashboard</span>
                     </a>
-                    <a href="#"
-                        class="flex items-center gap-3 px-3 py-2 text-blue-600 bg-blue-50 rounded-lg font-medium">
+                    <a href="./bookconsultation.html"
+                        class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
-                        <span>Find a Pharmacy</span>
+                        <span>Book Consultation</span>
                     </a>
                     <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -324,12 +469,15 @@
                         </svg>
                         <span>Prescriptions</span>
                     </a>
-                    <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
+                    <a href="./findpharmacy.html"
+                        class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
-                        <span>Appointments</span>
+                        <span>Pharmacies</span>
                     </a>
                     <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
