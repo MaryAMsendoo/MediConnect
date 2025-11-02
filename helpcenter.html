@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediConnect || Prescription</title>
+    <title>MediConnect || Profile</title>
 
     <link rel="icon" href="./favicon.png">
 
@@ -114,14 +114,13 @@
                     <span>Book Consultation</span>
                 </a>
                 <a href="./prescription.html"
-                    class="flex items-center gap-3 px-3 py-2 text-blue-600 bg-blue-50 rounded-lg font-medium">
+                    class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
-                    <span>Prescription</span>
+                    <span>Prescriptions</span>
                 </a>
-
                 <a href="./findpharmacy.html"
                     class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,21 +131,24 @@
                     </svg>
                     <span>Pharmacies</span>
                 </a>
-                <a href="./payment.html" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
+                <a href="./payment.html"
+                    class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                     </svg>
                     <span>Payments</span>
                 </a>
-                <a href="./profile.html" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
+                <a href="./profile.html"
+                    class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
                     <span>Profile</span>
                 </a>
-                <a href="settings.html" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
+                <a href="./settings.html"
+                    class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -155,7 +157,8 @@
                     </svg>
                     <span>Settings</span>
                 </a>
-                <a href="./helpcenter.html" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
+                <a href="./helpcenter.html"
+                    class="flex items-center gap-3 px-3 py-2 text-blue-600 bg-blue-50 rounded-lg font-medium">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -167,184 +170,61 @@
 
         <!-- Main Content -->
         <main class="flex-1 lg:ml-64 p-4 lg:p-8">
-            <!-- Header -->
-            <div class="flex justify-between items-center mb-6">
-                <div>
-                    <h1 class="text-2xl font-semibold text-gray-900">Prescription History</h1>
-                    <p class="text-sm text-gray-500">All your prescriptions from doctors, past and present.</p>
-                </div>
-                <button onclick="openRequestModal()" class="btn-primary">
-                    <i class="fa-solid fa-file-medical mr-1"></i> Request New Prescription
-                </button>
+  <!-- Header -->
+  <header class="bg-white shadow p-4">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-semibold">Help Center</h1>
+      <a href="./helpcenter.html" class="text-blue-600 hover:underline">Contact Support</a>
+    </div>
+  </header>
 
-            </div>
+  <!-- Search -->
+  <section class="max-w-2xl mx-auto mt-10 text-center px-4">
+    <h2 class="text-2xl font-semibold mb-4">How can we help you?</h2>
+    <input 
+      type="text" 
+      placeholder="Search for help articles..." 
+      class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+    >
+  </section>
 
-            <!-- Request Prescription Modal -->
+  <!-- Help Topics -->
+  <section class="max-w-4xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
+    <div class="bg-white shadow-sm p-6 rounded-lg hover:shadow-md transition">
+      <h3 class="font-semibold text-lg mb-2">Account</h3>
+      <p class="text-gray-600 text-sm">Manage your account settings and preferences.</p>
+    </div>
 
-            <div id="requestModal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-40">
-                <div class="bg-white rounded-xl p-6 w-full max-w-md">
-                    <h2 class="text-lg font-semibold text-gray-800 mb-4">Request New Prescription</h2>
-                    <form id="prescriptionForm">
-                        <label class="block text-sm mb-1 font-medium text-gray-600">Doctor</label>
-                        <select class="w-full border rounded-lg p-2 mb-3 text-sm">
-                            <option>Dr. Adams – Cardiology</option>
-                            <option>Dr. Lisa Grey – Pediatrics</option>
-                        </select>
-                        <label class="block text-sm mb-1 font-medium text-gray-600">Reason</label>
-                        <textarea class="w-full border rounded-lg p-2 mb-3 text-sm"
-                            placeholder="Describe your symptoms..."></textarea>
-                        <div class="flex justify-end gap-2">
-                            <button type="button" onclick="closeRequestModal()"
-                                class="text-gray-600 text-sm">Cancel</button>
-                            <button type="submit" class="bg-[#2E37A4] text-white text-sm px-3 py-2 rounded-lg">Submit
-                                Request</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+    <div class="bg-white shadow-sm p-6 rounded-lg hover:shadow-md transition">
+      <h3 class="font-semibold text-lg mb-2">Billing</h3>
+      <p class="text-gray-600 text-sm">Find help with invoices, payments, and refunds.</p>
+    </div>
 
+    <div class="bg-white shadow-sm p-6 rounded-lg hover:shadow-md transition">
+      <h3 class="font-semibold text-lg mb-2">Technical Support</h3>
+      <p class="text-gray-600 text-sm">Get assistance with technical issues and bugs.</p>
+    </div>
 
-            <!-- Filter Bar -->
-            <div class="flex flex-wrap gap-4 items-center mb-6">
-                <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
-                    <i class="fa-solid fa-search text-gray-400"></i>
-                    <input type="text" placeholder="Search prescriptions" class="ml-2 text-sm outline-none" />
-                </div>
-                <select class="bg-white px-4 py-2 rounded-lg shadow-sm text-sm text-gray-600">
-                    <option>All</option>
-                    <option>Active</option>
-                    <option>Completed</option>
-                    <option>Expired</option>
-                </select>
-            </div>
+    <div class="bg-white shadow-sm p-6 rounded-lg hover:shadow-md transition">
+      <h3 class="font-semibold text-lg mb-2">Booking Appointment</h3>
+      <p class="text-gray-600 text-sm">Understand how the booking of appointment work.</p>
+    </div>
 
-            <!-- Prescription Cards -->
-            <div class="grid gap-6">
-                <!-- One Card -->
-                <div class="rounded-xl shadow-sm p-6 border border-gray-100 hover:shadow-md transition">
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <h2 class="text-lg font-semibold text-gray-900">Dr. Samuel Adams</h2>
-                            <p class="text-sm text-gray-500">Cardiology • MediConnect Hospital</p>
-                        </div>
-                        <span class="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-medium">Active</span>
-                    </div>
+    <div class="bg-white shadow-sm p-6 rounded-lg hover:shadow-md transition">
+      <h3 class="font-semibold text-lg mb-2">Privacy & Security</h3>
+      <p class="text-gray-600 text-sm">Understand how we protect your data.</p>
+    </div>
 
-                    <p class="text-sm text-gray-500 mb-2"><i class="fa-solid fa-calendar-day mr-2"></i>Issued: Nov 1,
-                        2025</p>
+    <div class="bg-white shadow-sm p-6 rounded-lg hover:shadow-md transition">
+      <h3 class="font-semibold text-lg mb-2">Community</h3>
+      <p class="text-gray-600 text-sm">Join discussions and connect with other users.</p>
+    </div>
+  </section>
 
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li class="flex items-center"><i class="fa-solid fa-pills text-teal-600 mr-2"></i> Amoxicillin
-                            500mg – 1 capsule every 8h for 7 days</li>
-                        <li class="flex items-center"><i class="fa-solid fa-pills text-teal-600 mr-2"></i> Paracetamol
-                            500mg – as needed for pain</li>
-                    </ul>
-
-                    <div class="flex justify-end mt-4 gap-3">
-                        <button onclick="openModal()" class="text-indigo-600 text-sm font-medium hover:underline">
-                            <i class="fa-solid fa-eye mr-1"></i> View Details
-                        </button>
-                        <button class="text-gray-500 text-sm font-medium hover:text-indigo-600"><i
-                                class="fa-solid fa-download mr-1"></i> Download PDF</button>
-                    </div>
-                </div>
-
-                <div class="rounded-xl shadow-sm p-6 border border-gray-100 hover:shadow-md transition">
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <h2 class="text-lg font-semibold text-gray-900">Dr. Samuel Adams</h2>
-                            <p class="text-sm text-gray-500">Perdiatrics • MediConnect Hospital</p>
-                        </div>
-                        <span class="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-medium">Active</span>
-                    </div>
-
-                    <p class="text-sm text-gray-500 mb-2"><i class="fa-solid fa-calendar-day mr-2"></i>Issued: Nov. 11,
-                        2025</p>
-
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li class="flex items-center"><i class="fa-solid fa-pills text-teal-600 mr-2"></i> Amoxicillin
-                            500mg – 2 capsule every 8h for 7 days</li>
-                        <li class="flex items-center"><i class="fa-solid fa-pills text-teal-600 mr-2"></i> Paracetamol
-                            500mg – as needed for pain</li>
-                    </ul>
-
-                    <div class="flex justify-end mt-4 gap-3">
-                        <button onclick="openModal()" class="text-indigo-600 text-sm font-medium hover:underline">
-                            <i class="fa-solid fa-eye mr-1"></i> View Details
-                        </button>
-                        <button class="text-gray-500 text-sm font-medium hover:text-indigo-600"><i
-                                class="fa-solid fa-download mr-1"></i> Download PDF</button>
-                    </div>
-                </div>
-
-
-                <!-- Repeat for other prescriptions -->
-
-
-                <!-- Prescription Details Modal -->
-                <div id="prescriptionModal"
-                    class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm transition-opacity duration-300">
-                    <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg mx-4 p-6 relative">
-
-                        <!-- Close Button -->
-                        <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600">
-                            <i class="fa-solid fa-xmark text-xl"></i>
-                        </button>
-
-                        <!-- Header -->
-                        <div class="mb-4">
-                            <h2 class="text-xl font-semibold text-gray-900 flex items-center gap-2">
-                                <i class="fa-solid fa-user-doctor text-[#2E37A4]"></i>
-                                Dr. Samuel Adams
-                            </h2>
-                            <p class="text-sm text-gray-500">Cardiology • MediConnect Hospital</p>
-                            <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-calendar-day mr-1"></i>Issued:
-                                Nov 1, 2025</p>
-                        </div>
-
-                        <!-- Medicines List -->
-                        <div class="border-t border-b border-gray-200 py-3 mb-4">
-                            <h3 class="text-sm font-semibold text-gray-700 mb-2 flex items-center gap-1">
-                                <i class="fa-solid fa-pills text-[#0E9384]"></i> Prescribed Medicines
-                            </h3>
-                            <ul class="space-y-2 text-sm text-gray-600">
-                                <li class="flex items-start"><span class="font-medium mr-1">Amoxicillin 500mg:</span> 1
-                                    capsule every 8h for 7 days</li>
-                                <li class="flex items-start"><span class="font-medium mr-1">Paracetamol 500mg:</span> As
-                                    needed for pain</li>
-                            </ul>
-                        </div>
-
-                        <!-- Notes -->
-                        <div class="mb-4">
-                            <h3 class="text-sm font-semibold text-gray-700 mb-2"><i
-                                    class="fa-solid fa-notes-medical text-[#2E37A4] mr-1"></i>Doctor’s Notes</h3>
-                            <p class="text-sm text-gray-600 leading-relaxed">
-                                Ensure to take medication after meals. Return for follow-up in 7 days or if symptoms
-                                persist.
-                            </p>
-                        </div>
-
-                        <!-- Footer Buttons -->
-                        <div class="flex justify-end gap-3 mt-6">
-                            <button onclick="closeModal()"
-                                class="px-4 py-2 rounded-lg text-sm border border-gray-300 hover:bg-gray-100">
-                                Close
-                            </button>
-                            <button
-                                class="px-4 py-2 rounded-lg text-sm text-white bg-gradient-to-r from-[#2E37A4] to-[#0E9384] hover:opacity-90">
-                                <i class="fa-solid fa-download mr-1"></i> Download PDF
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                
-
-            </div>
-
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 mt-16 py-6 border-t">
+    © 2025 Your Company. All rights reserved.
+  </footer>          
         </main>
     </div>
 
@@ -388,8 +268,7 @@
                         <span>Book Consultation</span>
                     </a>
                     <a href="./prescription.html"
-                        class="flex items-center gap-3 px-3 py-2 text-blue-600 bg-blue-50 rounded-lg font-medium">
-
+                        class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -406,21 +285,24 @@
                         </svg>
                         <span>Pharmacies</span>
                     </a>
-                    <a href="./payment.html" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
+                    <a href="./payment.html"
+                        class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                         </svg>
                         <span>Payments</span>
                     </a>
-                    <a href="./profile.html" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
+                    <a href="./profile.html"
+                        class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
                         <span>Profile</span>
                     </a>
-                    <a href="./settings.html" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
+                    <a href="./settings.html"
+                        class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -429,7 +311,8 @@
                         </svg>
                         <span>Settings</span>
                     </a>
-                    <a href="./helpcenter.html" class="flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">
+                    <a href="./helpcenter.html"
+                        class="flex items-center gap-3 px-3 py-2 text-blue-600 bg-blue-50 rounded-lg font-medium">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -453,27 +336,6 @@
                 toggleMobileMenu();
             }
         });
-
-
-        // Modal control
-        function openModal() {
-            document.getElementById('prescriptionModal').classList.remove('hidden');
-        }
-        function closeModal() {
-            document.getElementById('prescriptionModal').classList.add('hidden');
-        }
-
-        // Attach event to View Details button
-        document.querySelectorAll('.text-indigo-600.text-sm.font-medium').forEach(btn => {
-            btn.addEventListener('click', openModal);
-        });
-
-        function openRequestModal() {
-            document.getElementById("requestModal").classList.remove("hidden");
-        }
-        function closeRequestModal() {
-            document.getElementById("requestModal").classList.add("hidden");
-        }
 
     </script>
 </body>
