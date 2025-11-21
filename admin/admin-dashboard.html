@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - VitaHealth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-semibold">Admin Dashboard</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span id="userWelcome" class="text-gray-700"></span>
+                    <button onclick="auth.logout()" 
+                            class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 px-4 sm:px-0">
+            
+            <!-- Add Doctor Form -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h2 class="text-lg font-semibold mb-4">Add New Doctor</h2>
+                    <form id="addDoctorForm">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2">Full Name</label>
+                            <input type="text" id="doctorName" 
+                                   class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <span class="error-message hidden text-red-500 text-xs mt-1" id="doctorNameError"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="doctorEmail" 
+                                   class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <span class="error-message hidden text-red-500 text-xs mt-1" id="doctorEmailError"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2">Password</label>
+                            <input type="password" id="doctorPassword" 
+                                   class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <span class="error-message hidden text-red-500 text-xs mt-1" id="doctorPasswordError"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2">Specialization</label>
+                            <input type="text" id="doctorSpecialization" 
+                                   class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+
+                        <div id="doctorFormMessage" class="hidden mb-4 p-3 rounded-lg text-center"></div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-[#2E37A4] text-white py-2 rounded-lg font-medium hover:bg-indigo-700">
+                            Add Doctor
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Users List -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h2 class="text-lg font-semibold mb-4">Users Management</h2>
+                    
+                    <div class="mb-6">
+                        <h3 class="font-medium mb-2">Doctors</h3>
+                        <div id="doctorsList" class="space-y-2">
+                            <!-- Doctors will be listed here -->
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-medium mb-2">Patients</h3>
+                        <div id="patientsList" class="space-y-2">
+                            <!-- Patients will be listed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        // Protect admin route
+        if (auth.protectRoute()) {
+            const user = auth.getCurrentUser();
+            document.getElementById('userWelcome').textContent = `Welcome, ${user.name}`;
+            
+            // Redirect non-admins away
+            if (user.userType !== 'admin') {
+                auth.redirectToDashboard(user.userType);
+            }
+            
+            loadUsers();
+        }
+
+        // Add Doctor Form
+        document.getElementById('addDoctorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const doctorData = {
+                name: document.getElementById('doctorName').value,
+                email: document.getElementById('doctorEmail').value,
+                password: document.getElementById('doctorPassword').value,
+                specialization: document.getElementById('doctorSpecialization').value
+            };
+
+            // Clear errors
+            clearError('doctorNameError');
+            clearError('doctorEmailError');
+            clearError('doctorPasswordError');
+
+            let isValid = true;
+
+            if (!FormValidator.validateName(doctorData.name)) {
+                showError('doctorNameError', 'Name must be at least 2 characters long');
+                isValid = false;
+            }
+
+            if (!FormValidator.validateEmail(doctorData.email)) {
+                showError('doctorEmailError', 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            if (!FormValidator.validatePassword(doctorData.password)) {
+                showError('doctorPasswordError', 'Password must be at least 6 characters long');
+                isValid = false;
+            }
+
+            if (isValid) {
+                const result = auth.addDoctor(doctorData);
+                if (result.success) {
+                    showMessage('doctorFormMessage', result.message, false);
+                    document.getElementById('addDoctorForm').reset();
+                    loadUsers();
+                } else {
+                    showMessage('doctorFormMessage', result.message, true);
+                }
+            }
+        });
+
+        function loadUsers() {
+            const doctors = auth.getUsersByType('doctor');
+            const patients = auth.getUsersByType('patient');
+
+            // Display doctors
+            const doctorsList = document.getElementById('doctorsList');
+            doctorsList.innerHTML = doctors.length > 0 ? 
+                doctors.map(doctor => `
+                    <div class="flex justify-between items-center p-3 border border-gray-200 rounded-lg">
+                        <div>
+                            <span class="font-medium">${doctor.name}</span>
+                            <span class="text-gray-500 text-sm ml-2">${doctor.specialization || 'General'}</span>
+                        </div>
+                        <span class="text-gray-400 text-sm">${doctor.email}</span>
+                    </div>
+                `).join('') :
+                '<p class="text-gray-500">No doctors added yet.</p>';
+
+            // Display patients
+            const patientsList = document.getElementById('patientsList');
+            patientsList.innerHTML = patients.length > 0 ? 
+                patients.map(patient => `
+                    <div class="flex justify-between items-center p-3 border border-gray-200 rounded-lg">
+                        <span class="font-medium">${patient.name}</span>
+                        <span class="text-gray-400 text-sm">${patient.email}</span>
+                    </div>
+                `).join('') :
+                '<p class="text-gray-500">No patients registered yet.</p>';
+        }
+    </script>
+</body>
+</html>
